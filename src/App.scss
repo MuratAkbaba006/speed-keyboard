@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+$primary-color:#F9F7CF;
+$secondary-color:#8DB596;
+$thirdy-color:#E0ECE4;
+$fourth-color:#383E56;
+*{
+  font-family: 'Cambay', sans-serif;
+
+}
+
+body{
+  background-color: $primary-color;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  background-color: $secondary-color;
+  justify-content: center;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  color:#F9F9F9
+}
+
+.info{
+  background-color:#CCEABB;
+  margin-top:10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.paragraph {
+  width: 80%;
+  background-color: $thirdy-color;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  &-text {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    margin: 3px;
+    color:$fourth-color;
+  }
+}
+
+.inputarea {
+  margin-top: 10px;
+  display: flex;
+  box-sizing: border-box;
+  width: 80%;
+  &-container {
+    width: 100%;
+    display: flex;
+
+    textarea{
+      border-radius: 10px;
+      margin: 5px;
+      background-color: #F7F6F2;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .timerarea {
+      text-align: center;
+      display: flex;
+      align-items: center;
+
+      &-second {
+        font-size: 25px;
+        background-color: $secondary-color;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        font-weight: 700;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .paragraph{
+    padding: 2px;
+    &-text {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0px;
+    }
+  }
+
+  .inputarea{
+    textarea{
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
