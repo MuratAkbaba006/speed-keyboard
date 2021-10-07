@@ -4,7 +4,7 @@ import axios from "axios";
 export const FetchRandomTextAsync = createAsyncThunk(
   "text/FetchRandomTextAsync",
   async () => {
-    const response = await axios.get("/api/1/medium/plaintext/",{headers:{'Access-Control-Allow-Origin' : '*'}});
+    const response = await axios.get("https://cors-anywhere.herokuapp.com/https://loripsum.net/api/1/medium/plaintext/",{headers:{'Access-Control-Allow-Origin' : '*'}});
     return response.data;
   }
 );
