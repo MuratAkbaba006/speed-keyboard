@@ -4,7 +4,7 @@ import axios from "axios";
 export const FetchRandomTextAsync = createAsyncThunk(
   "text/FetchRandomTextAsync",
   async () => {
-    const response = await axios.get("https://loripsum.net/api/1/medium/plaintext/");
+    const response = await axios.get("https://loripsum.net/api/1/medium/plaintext/",{headers:{'Access-Control-Allow-Origin' : '*'}});
     return response.data;
   }
 );
