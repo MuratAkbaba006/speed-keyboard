@@ -1,8 +1,8 @@
-const proxy = require('http-proxy-middleware');
+const {createProxyMiddleware} = require('http-proxy-middleware');
 
 module.exports = function(app){
   app.use(
-    proxy("/api/1/medium/plaintext/",{
+    "/api/1/medium/plaintext/",createProxyMiddleware({
       target:"https://loripsum.net",
       changeOrigin:true
     })
