@@ -2,7 +2,6 @@
   "name": "speed-keyboard",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://loripsum.net",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
     "@testing-library/jest-dom": "^5.14.1",
@@ -43,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^2.0.1"
   }
 }
